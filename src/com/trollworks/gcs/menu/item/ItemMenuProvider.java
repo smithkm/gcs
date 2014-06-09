@@ -50,6 +50,7 @@ public class ItemMenuProvider implements MenuProvider {
 		cmds.add(NewSpellCommand.CONTAINER_INSTANCE);
 		cmds.add(NewEquipmentCommand.CARRIED_INSTANCE);
 		cmds.add(NewEquipmentCommand.CARRIED_CONTAINER_INSTANCE);
+		cmds.add(CreateTalentCommand.INSTANCE);
 		return cmds;
 	}
 
@@ -74,6 +75,8 @@ public class ItemMenuProvider implements MenuProvider {
 		menu.addSeparator();
 		menu.add(new DynamicMenuItem(NewEquipmentCommand.CARRIED_INSTANCE));
 		menu.add(new DynamicMenuItem(NewEquipmentCommand.CARRIED_CONTAINER_INSTANCE));
+		menu.addSeparator();
+		menu.add(new DynamicMenuItem(CreateTalentCommand.INSTANCE));
 		DynamicMenuEnabler.add(menu);
 		return menu;
 	}
